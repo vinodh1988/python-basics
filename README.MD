@@ -286,6 +286,35 @@ else:
     ## Collections in Python
 
     Python provides several built-in collection data types to store and organize data:
+    Below are the four main built-in collection types in Python, along with their meanings and key features:
+
+    ### List
+    - **Meaning:** An ordered, mutable collection that can hold items of any type.
+    - **Features:**
+        - Allows duplicate elements.
+        - Elements can be changed, added, or removed.
+        - Defined using square brackets `[]`.
+
+    ### Tuple
+    - **Meaning:** An ordered, immutable collection that can hold items of any type.
+    - **Features:**
+        - Allows duplicate elements.
+        - Elements cannot be changed after creation.
+        - Defined using parentheses `()`.
+
+    ### Set
+    - **Meaning:** An unordered, mutable collection of unique elements.
+    - **Features:**
+        - Does not allow duplicate elements.
+        - Elements can be added or removed, but not changed.
+        - Defined using curly braces `{}`.
+
+    ### Dictionary
+    - **Meaning:** An unordered (insertion ordered from Python 3.7+), mutable collection of key-value pairs.
+    - **Features:**
+        - Keys must be unique and immutable; values can be of any type.
+        - Allows fast lookup, insertion, and deletion by key.
+        - Defined using curly braces `{}` with key-value pairs separated by colons.
 
     ### 1. List
 
