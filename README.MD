@@ -140,3 +140,78 @@ print(a > b)      # True (Comparison)
 print(a is b)     # False (Identity)
 print(a in [1, 10, 100])  # True (Membership)
 ```
+
+---
+
+### Operators Not Present in Python
+
+Some operators found in other programming languages are not available in Python:
+
+- **Increment (`++`) and Decrement (`--`) Operators:** Python does not support `++` or `--` for increasing or decreasing variable values. Use `a += 1` or `a -= 1` instead.
+- **Ternary (`?:`) Operator:** Python uses a different syntax for conditional expressions: `x if condition else y`.
+- **Compound Bitwise Assignment Operators like `&=`, `|=`, `^=`, `<<=`, `>>=`:** These are supported in Python, but some languages have additional compound operators not present in Python.
+- **Pointer and Address Operators (`*`, `&` as in C/C++):** Python does not use pointers or direct memory address manipulation.
+
+---
+## Notes on `if` and `elif` Statements
+
+- The `if` statement is used to execute a block of code only if a specified condition is `True`.
+- The `elif` (short for "else if") statement allows you to check multiple expressions for `True` and execute a block of code as soon as one of the conditions is `True`.
+- You can have multiple `elif` statements after an `if`.
+- The `else` statement can be used at the end to execute code if none of the previous conditions are `True`.
+- Indentation is required to define the blocks of code under each condition.
+
+**Example:**
+```python
+x = 10
+if x > 0:
+    print("Positive")
+elif x == 0:
+    print("Zero")
+else:
+    print("Negative")
+```
+## Switch Statement in Python
+
+Python does not have a built-in `switch` or `case` statement like some other languages (e.g., C, Java). Instead, you can achieve similar functionality using `if-elif-else` chains or by using dictionaries to map cases to actions.
+
+**Example using `if-elif-else`:**
+```python
+value = 2
+if value == 1:
+    print("One")
+elif value == 2:
+    print("Two")
+elif value == 3:
+    print("Three")
+else:
+    print("Other")
+```
+
+**Example using a dictionary (recommended for many cases):**
+```python
+def switch_case(value):
+    return {
+        1: "One",
+        2: "Two",
+        3: "Three"
+    }.get(value, "Other")
+
+print(switch_case(2))  # Output: Two
+```
+
+**Note:**  
+Starting from Python 3.10, the `match` statement (structural pattern matching) provides similar functionality to a switch-case:
+
+```python
+value = 2
+match value:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case 3:
+        print("Three")
+    case _:
+        print("Other")
+```
