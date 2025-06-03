@@ -1,3 +1,4 @@
+import regex
 sample_strings = [
     "Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Heidi", "Ivan", "Judy",
     "Oscar", "Mallory", "Peggy", "Sybil", "Trent", "Victor", "Walter", "Yvonne", "Zara",
@@ -25,5 +26,27 @@ sample_strings = [
     "success200", "fail500", "alice#domain.com", "bob@domain,com", "charlie@domain..com",
     "pig","hen","cow","dog","cat","fish","bird","snake","turtle","rabbit",
     "lion", "tiger", "bear", "elephant", "giraffe", "zebra", "monkey", "kangaroo",
-    "John","Jhon","Jon"
+    "John","Jhon","Jon","Jonson","Jhonson","10.0.0.17","192.168.1.1","49.113.12.34","10.43.55.35",
+    "345.3636","434.34.abc","avv.ere.ere.rtd","is","an","he","a12x","x45p"
 ]
+reg = r'^[a-zA-Z][a-zA-z0-9_\.]+@[a-zA-z][a-zA-z0-9_]+\.[a-zA-z]{2,7}$'  # Matches two letters separated by a space
+for x in sample_strings:
+   
+    if regex.search(reg, x):
+        print(f"Matched: {x}")
+
+#   reg = r'^R'
+#   reg = r'a$'
+#   reg = r'^[0-9]'
+#  reg = r'^[A-Z]'
+# reg = r'^[A-Z][ai][rt]'
+# reg = r'^J(oh|ho|o)n'
+# reg = r'^[A-Za-z][a-z][A-Za-z]$'
+# reg = r'^[A-Za-z][a-z]+[A-Za-z]$'
+# reg = r'^[A-Za-z][a-z]*[A-Za-z]$'
+# reg = r'^[A-Za-z][a-z]?[A-Za-z]$'
+# reg = r'^[A-Za-z][a-z]{2}[A-Za-z]$' 
+# reg = r'^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$'
+# reg = r'^[a-zA-Z][a-zA-z0-9_\.]+@[a-zA-z][a-zA-z0-9_]+\.[a-zA-z]{2,7}$'
+
+
