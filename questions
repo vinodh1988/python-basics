@@ -1,0 +1,57 @@
+# 50 Python Programming Questions (Operators, Conditionals, Loops, Collections, Regex)
+
+# 1. Write a program to add two numbers and print the result.
+# 2. Given two numbers, print their quotient and remainder.
+# 3. Check if a number is even or odd using the modulus operator.
+# 4. Swap two variables using a temporary variable.
+# 5. Swap two variables without using a temporary variable.
+# 6. Given a float, print its integer and fractional parts separately.
+# 7. Write a program to check if two variables refer to the same object in memory.
+# 8. Given a list, check if a value exists in the list using membership operators.
+# 9. Use assignment operators to increment a variable by 5, then multiply it by 2.
+# 10. Given two numbers, print which one is greater using comparison operators.
+
+# 11. Write a program to check if a string contains only digits using a loop and logical operators.
+# 12. Given a list of numbers, print only the even numbers using a for loop.
+# 13. Write a program to count the number of vowels in a string.
+# 14. Given a string, print its reverse using a loop.
+# 15. Write a program to check if a string is a palindrome.
+# 16. Given a list, remove all duplicate elements and print the result.
+# 17. Merge two lists and sort the result.
+# 18. Given a tuple, print all its elements using a for loop.
+# 19. Write a program to find the intersection of two sets.
+# 20. Given a dictionary, print all keys and values.
+
+# 21. Write a program to update the value of a key in a dictionary.
+# 22. Given a dictionary, add a new key-value pair only if the key does not exist.
+# 23. Write a program to count the frequency of each character in a string using a dictionary.
+# 24. Given a list of numbers, print the sum and average.
+# 25. Write a program to find the maximum and minimum values in a list without using built-in functions.
+# 26. Given a list of strings, print only those that start with a vowel.
+# 27. Write a program to remove all whitespace from a string.
+# 28. Given a string, replace all vowels with '*'.
+# 29. Write a program to split a string into words and print each word on a new line.
+# 30. Given a list of numbers, print the squares of all odd numbers.
+
+# 31. Write a program to check if a number is prime.
+# 32. Given a number, print its factorial using a while loop.
+# 33. Write a program to print the Fibonacci sequence up to n terms.
+# 34. Given a list, print the second largest element.
+# 35. Write a program to flatten a nested list (e.g., [[1,2],[3,4]]) into a single list.
+# 36. Given a string, count the number of words using regular expressions.
+# 37. Write a program to extract all email addresses from a given text using regex.
+# 38. Given a string, check if it matches a valid phone number pattern using regex.
+# 39. Write a program to validate if a string is a valid Python identifier.
+# 40. Given a list of strings, filter out all strings that contain digits using regex.
+
+# 41. Write a program to capitalize the first letter of each word in a string.
+# 42. Given a list of numbers, remove all elements greater than a given value.
+# 43. Write a program to count the number of unique words in a sentence.
+# 44. Given a dictionary, invert it (swap keys and values).
+# 45. Write a program to group words by their first letter using a dictionary.
+# 46. Given a list of tuples (name, score), print the name(s) with the highest score.
+# 47. Write a program to find all substrings of a string.
+# 48. Given a string, print all characters that appear more than once.
+# 49. Write a program to check if two strings are anagrams.
+# 50. Given a list of numbers, use a for-else loop to check if all numbers are positive; print a message if any are negative.
+
