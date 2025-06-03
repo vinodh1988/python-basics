@@ -284,3 +284,53 @@ for i in range(3):
 else:
     print("Loop finished")
 ```
+## Handling Regular Expressions in Python
+
+Regular expressions (regex) are used for searching, matching, and manipulating text based on patterns. Python provides the `re` module to work with regular expressions.
+
+### Basic Usage
+
+```python
+import re
+
+pattern = r"\d+"
+text = "There are 24 apples and 7 oranges."
+matches = re.findall(pattern, text)
+print(matches)  # Output: ['24', '7']
+```
+
+### Common Functions in `re` Module
+
+- `re.match(pattern, string)`: Checks for a match only at the beginning of the string.
+- `re.search(pattern, string)`: Searches the string for a match.
+- `re.findall(pattern, string)`: Returns all non-overlapping matches as a list.
+- `re.sub(pattern, repl, string)`: Replaces matches with a string.
+
+---
+
+### Regular Expression Wildcard Characters
+
+| Character | Description                                 | Example      | Matches                |
+|-----------|---------------------------------------------|--------------|------------------------|
+| `.`       | Any character except newline                | `a.c`        | `abc`, `a1c`, `a-c`    |
+| `^`       | Start of string                             | `^abc`       | `abc` at start         |
+| `$`       | End of string                               | `abc$`       | `abc` at end           |
+| `*`       | 0 or more repetitions of preceding pattern  | `ab*`        | `a`, `ab`, `abb`       |
+| `+`       | 1 or more repetitions of preceding pattern  | `ab+`        | `ab`, `abb`            |
+| `?`       | 0 or 1 repetition of preceding pattern      | `ab?`        | `a`, `ab`              |
+| `{n}`     | Exactly n repetitions                      | `a{3}`       | `aaa`                  |
+| `{n,}`    | n or more repetitions                      | `a{2,}`      | `aa`, `aaa`, ...       |
+| `{n,m}`   | Between n and m repetitions                | `a{1,3}`     | `a`, `aa`, `aaa`       |
+| `[]`      | Any one character in set                   | `[abc]`      | `a`, `b`, or `c`       |
+| `[^]`     | Any one character not in set               | `[^abc]`     | Not `a`, `b`, or `c`   |
+| `|`       | Alternation (OR)                           | `a|b`        | `a` or `b`             |
+| `\d`      | Any digit (0-9)                            | `\d`         | `0` to `9`             |
+| `\D`      | Any non-digit                              | `\D`         | Any non-digit character|
+| `\w`      | Any word character (alphanumeric or _)      | `\w`         | `a-z`, `A-Z`, `0-9`, `_`|
+| `\W`      | Any non-word character                     | `\W`         | Not `a-z`, `A-Z`, `0-9`, `_`|
+| `\s`      | Any whitespace character                   | `\s`         | Space, tab, newline    |
+| `\S`      | Any non-whitespace character               | `\S`         | Any non-whitespace     |
+
+**Note:** Use raw strings (prefix with `r`) for regex patterns to avoid issues with escape sequences.
+
+--- 
