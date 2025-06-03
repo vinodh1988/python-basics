@@ -215,3 +215,72 @@ match value:
     case _:
         print("Other")
 ```
+## Iterative Statements in Python
+
+Iterative statements (loops) are used to execute a block of code repeatedly as long as a condition is met. Python provides two main types of loops: `while` and `for`.
+
+### `while` Loop
+
+The `while` loop executes its block as long as the condition is `True`.
+
+**Syntax:**
+```python
+while condition:
+    # code block
+```
+
+**Example:**
+```python
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+```
+
+### `for` Loop
+
+The `for` loop iterates over a sequence (such as a list, tuple, string, or range).
+
+**Syntax:**
+```python
+for variable in sequence:
+    # code block
+```
+
+**Example:**
+```python
+for i in range(5):
+    print(i)
+```
+
+### `break` and `continue`
+
+- `break` exits the loop immediately.
+- `continue` skips the rest of the current iteration and moves to the next.
+
+**Example:**
+```python
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+```
+
+```python
+for i in range(5):
+    if i == 3:
+        continue
+    print(i)
+```
+
+### `else` with Loops
+
+An optional `else` block can be added to loops. It executes if the loop completes normally (not terminated by `break`).
+
+**Example:**
+```python
+for i in range(3):
+    print(i)
+else:
+    print("Loop finished")
+```
