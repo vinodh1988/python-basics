@@ -1,0 +1,14 @@
+sno = int(input("Enter serial number: "))
+name = input("Enter name: ")
+city = input("Enter city: ")
+weight = float(input("Enter weight: "))
+
+print("Serial Number:", sno)
+print("Name:", name)
+print("City:", city)
+print
+
+print("Type of Serial Number:", type(sno))
+print("Type of Name:", type(name))
+print("Type of City:", type(city))
+print("Type of Weight:", type(weight))
