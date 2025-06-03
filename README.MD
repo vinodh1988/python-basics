@@ -283,7 +283,9 @@ for i in range(3):
     print(i)
 else:
     print("Loop finished")
-    ## Collections in Python
+ 
+```
+   ## Collections in Python
 
     Python provides several built-in collection data types to store and organize data:
     Below are the four main built-in collection types in Python, along with their meanings and key features:
@@ -373,7 +375,6 @@ else:
     \*Dictionaries preserve insertion order from Python 3.7 onwards.
 
     --- 
-```
 ## Handling Regular Expressions in Python
 
 Regular expressions (regex) are used for searching, matching, and manipulating text based on patterns. Python provides the `re` module to work with regular expressions.
