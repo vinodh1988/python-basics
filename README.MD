@@ -283,6 +283,67 @@ for i in range(3):
     print(i)
 else:
     print("Loop finished")
+    ## Collections in Python
+
+    Python provides several built-in collection data types to store and organize data:
+
+    ### 1. List
+
+    - Ordered, mutable, allows duplicate elements.
+    - Defined with square brackets `[]`.
+
+    ```python
+    fruits = ["apple", "banana", "cherry"]
+    fruits.append("orange")
+    print(fruits[1])  # Output: banana
+    ```
+
+    ### 2. Tuple
+
+    - Ordered, immutable, allows duplicate elements.
+    - Defined with parentheses `()`.
+
+    ```python
+    coordinates = (10, 20)
+    print(coordinates[0])  # Output: 10
+    ```
+
+    ### 3. Set
+
+    - Unordered, mutable, no duplicate elements.
+    - Defined with curly braces `{}`.
+
+    ```python
+    unique_numbers = {1, 2, 3, 2}
+    unique_numbers.add(4)
+    print(unique_numbers)  # Output: {1, 2, 3, 4}
+    ```
+
+    ### 4. Dictionary
+
+    - Unordered (Python 3.7+: insertion ordered), mutable, key-value pairs.
+    - Defined with curly braces `{}` and colons.
+
+    ```python
+    person = {"name": "Alice", "age": 25}
+    print(person["name"])  # Output: Alice
+    person["age"] = 26
+    ```
+
+    ---
+
+    **Summary Table:**
+
+    | Type        | Ordered | Mutable | Allows Duplicates | Example Syntax      |
+    |-------------|---------|---------|-------------------|---------------------|
+    | List        | Yes     | Yes     | Yes               | `[1, 2, 3]`         |
+    | Tuple       | Yes     | No      | Yes               | `(1, 2, 3)`         |
+    | Set         | No      | Yes     | No                | `{1, 2, 3}`         |
+    | Dictionary  | Yes*    | Yes     | Keys: No, Values: Yes | `{"a": 1, "b": 2}` |
+
+    \*Dictionaries preserve insertion order from Python 3.7 onwards.
+
+    --- 
 ```
 ## Handling Regular Expressions in Python
 
