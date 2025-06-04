@@ -13,6 +13,9 @@ class Person:
         """Display person's details."""
         print(f"Person  sno: {self.sno} Name,: {self.name}, Age: {self.age}")
 
+    def __repr__(self):
+        return f"Person(sno={self.sno}, name='{self.name}', age={self.age})"
+
 person1= Person(1, "Alice", 30) # will call __init__ method
 person2 = Person(2, "Bob", 25)
 person3 = Person(3, "Charlie", 35)
@@ -20,3 +23,7 @@ person3 = Person(3, "Charlie", 35)
 person1.show()
 person2.show()
 person3.show()
+
+print(person1) # will call __repr__ method
+print(person2)
+print(person3)
