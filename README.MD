@@ -589,3 +589,37 @@ demo(1, 2, a=3, b=4)
 # args: (1, 2)
 # kwargs: {'a': 3, 'b': 4}
 ```
+
+## Callback Functions in Python
+
+A callback function is a function that is passed as an argument to another function and is intended to be called after a certain event or action occurs. Callbacks are commonly used for event handling, asynchronous programming, and customizing behavior.
+
+### Defining and Using a Callback
+
+You can pass a function as an argument to another function:
+
+```python
+def process_data(data, callback):
+    # Do something with data
+    result = data.upper()
+    # Call the callback function with the result
+    callback(result)
+
+def print_result(output):
+    print("Processed:", output)
+
+process_data("hello", print_result)
+# Output: Processed: HELLO
+```
+
+### Using Lambda as a Callback
+
+You can also use a lambda function as a callback:
+
+```python
+process_data("world", lambda x: print("Lambda:", x))
+# Output: Lambda: WORLD
+```
+
+**Note:**  
+Any function that can be called (including lambdas and built-in functions) can be used as a callback in Python.
