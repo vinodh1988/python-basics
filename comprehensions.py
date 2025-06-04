@@ -13,3 +13,11 @@ print("Length of names in the list are: ", length_of_names)
 threedigits = [ x  for x in listx if x>=100 and x<=999 ]
 
 print("Three digit numbers in the list are: ", threedigits)
+
+names=["Alice", "Bob", "Charlie", "David", "Eve", "Frank", 
+       "Grace", "Hannah", "Ian", "Jack", "Kathy", "Liam", "Mia", "Nina", "Oscar", "Paul",
+       "Ian","Eve","Alice","Bob","Charlie","David","Eve"]
+
+vowels = "aeiouAEIOU"
+vowelstarters ={ name for name in names if name[0] in vowels }
+print("Names starting with a vowel are: ", vowelstarters)
