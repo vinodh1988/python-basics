@@ -653,3 +653,24 @@ print(list(result))  # Output: [5, 7, 9]
 
 **Note:**  
 `map()` returns an iterator in Python 3. Use `list()` or `set()` to get the results.
+
+## The `filter()` Function in Python
+
+The `filter()` function constructs an iterator from elements of an iterable for which a function returns `True`.
+
+**Syntax:**
+```python
+filter(function, iterable)
+```
+- `function`: A function that returns `True` or `False` for each element.
+- `iterable`: The sequence to filter.
+
+**Example:**
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+evens = filter(lambda x: x % 2 == 0, numbers)
+print(list(evens))  # Output: [2, 4, 6]
+```
+
+**Note:**  
+`filter()` returns an iterator in Python 3. Use `list()` or `set()` to get the results.
