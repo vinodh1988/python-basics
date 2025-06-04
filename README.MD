@@ -674,3 +674,35 @@ print(list(evens))  # Output: [2, 4, 6]
 
 **Note:**  
 `filter()` returns an iterator in Python 3. Use `list()` or `set()` to get the results.
+
+## The `reduce()` Function in Python
+
+The `reduce()` function applies a specified function cumulatively to the items of an iterable, reducing the iterable to a single value. It is available in the `functools` module.
+
+**Syntax:**
+```python
+from functools import reduce
+
+reduce(function, iterable[, initializer])
+```
+- `function`: A function that takes two arguments and returns a single value.
+- `iterable`: The sequence to process.
+- `initializer` (optional): A starting value.
+
+**Example:**
+```python
+from functools import reduce
+
+numbers = [1, 2, 3, 4]
+product = reduce(lambda x, y: x * y, numbers)
+print(product)  # Output: 24
+```
+
+**With an Initializer:**
+```python
+sum_with_initial = reduce(lambda x, y: x + y, numbers, 10)
+print(sum_with_initial)  # Output: 20
+```
+
+**Note:**  
+Use `reduce()` when you need to combine all elements of an iterable into a single result, such as summing or multiplying all items.
