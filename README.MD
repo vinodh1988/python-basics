@@ -543,3 +543,49 @@ print(double(5))  # Output: 10
 | Lambda function    | `lambda x: x + 1`                       |
 
 ---
+
+## Functions with Variable Number of Parameters
+
+Python allows you to define functions that accept a variable number of arguments using `*args` for positional arguments and `**kwargs` for keyword arguments.
+
+### Using `*args`
+
+- Collects extra positional arguments as a tuple.
+
+```python
+def print_numbers(*args):
+    for num in args:
+        print(num)
+
+print_numbers(1, 2, 3)  # Output: 1 2 3
+```
+
+### Using `**kwargs`
+
+- Collects extra keyword arguments as a dictionary.
+
+```python
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Alice", age=25)
+# Output:
+# name: Alice
+# age: 25
+```
+
+### Combining Both
+
+You can use both in the same function (with `*args` before `**kwargs`):
+
+```python
+def demo(*args, **kwargs):
+    print("args:", args)
+    print("kwargs:", kwargs)
+
+demo(1, 2, a=3, b=4)
+# Output:
+# args: (1, 2)
+# kwargs: {'a': 3, 'b': 4}
+```
