@@ -12,6 +12,11 @@ def infobit(data):
 def whocares(data):
     print(f"Who cares about this data? {data}")
 
+targetfun = lambda data: print(f"Target function received: {data}")
+
 processtimes(5, infobit) 
 print("-------------------------------------------------")
-processtimes (2, whocares) # Example call with 5 iterations and the infobit function
+processtimes (2, whocares)
+print("---------------------------------------------------")
+processtimes(3, targetfun)
+print("---------------------------------------------------")
