@@ -706,3 +706,99 @@ print(sum_with_initial)  # Output: 20
 
 **Note:**  
 Use `reduce()` when you need to combine all elements of an iterable into a single result, such as summing or multiplying all items.
+
+## Exception Handling in Python
+
+Exception handling allows you to manage errors gracefully and prevent your program from crashing unexpectedly. Python uses `try`, `except`, `else`, and `finally` blocks for exception handling.
+
+### Basic Syntax
+
+```python
+try:
+    # Code that may raise an exception
+    result = 10 / 0
+except ZeroDivisionError:
+    # Code to handle the exception
+    print("Cannot divide by zero.")
+```
+
+### Catching Multiple Exceptions
+
+```python
+try:
+    value = int("abc")
+except (ValueError, TypeError):
+    print("Invalid input or type.")
+```
+
+### Using `else` and `finally`
+
+- `else` runs if no exception occurs.
+- `finally` always runs (for cleanup actions).
+
+```python
+try:
+    num = int(input("Enter a number: "))
+except ValueError:
+    print("Not a valid number.")
+else:
+    print("You entered:", num)
+finally:
+    print("Execution complete.")
+```
+
+### Raising Exceptions
+
+Use `raise` to trigger exceptions manually.
+
+```python
+def divide(a, b):
+    if b == 0:
+        raise ValueError("b cannot be zero")
+    return a / b
+```
+
+---
+
+**Summary Table:**
+
+| Block     | Purpose                                      |
+|-----------|----------------------------------------------|
+| `try`     | Wrap code that may raise exceptions          |
+| `except`  | Handle specific exceptions                   |
+| `else`    | Run if no exception occurs                   |
+| `finally` | Always run (cleanup, closing files, etc.)    |
+
+--- 
+## User Defined Exceptions in Python
+
+Python allows you to define your own custom exception classes by inheriting from the built-in `Exception` class (or one of its subclasses). This is useful when you want to signal specific error conditions in your code.
+
+### Defining a Custom Exception
+
+```python
+class MyCustomError(Exception):
+    """Custom exception for specific error cases."""
+    pass
+```
+
+### Raising and Handling a Custom Exception
+
+```python
+def check_positive(number):
+    if number < 0:
+        raise MyCustomError("Number must be positive")
+    return number
+
+try:
+    check_positive(-5)
+except MyCustomError as e:
+    print("Caught custom exception:", e)
+```
+
+**Notes:**
+- You can add custom initialization or attributes to your exception class if needed.
+- Custom exceptions help make your code more descriptive and easier to debug.
+- It's common to end custom exception class names with `Error`.
+
+--- 
