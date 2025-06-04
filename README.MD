@@ -425,3 +425,45 @@ print(matches)  # Output: ['24', '7']
 **Note:** Use raw strings (prefix with `r`) for regex patterns to avoid issues with escape sequences.
 
 --- 
+## Ternary Operator Alternative in Python
+
+Python does not have the `?:` ternary operator found in languages like C or Java. Instead, it uses a conditional expression with the syntax:
+
+```python
+value_if_true if condition else value_if_false
+```
+
+**Example:**
+```python
+x = 5
+result = "Even" if x % 2 == 0 else "Odd"
+print(result)  # Output: Odd
+```
+
+This provides a concise way to assign a value based on a condition.
+## Loop Expressions (List Comprehensions)
+
+Python provides a concise way to create lists using loop expressions, known as list comprehensions. They allow you to generate a new list by applying an expression to each item in an iterable, optionally filtering items with a condition.
+
+**Syntax:**
+```python
+[expression for item in iterable if condition]
+```
+
+**Examples:**
+```python
+# Create a list of squares from 0 to 4
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
+
+# Create a list of even numbers from 0 to 9
+evens = [x for x in range(10) if x % 2 == 0]
+print(evens)  # Output: [0, 2, 4, 6, 8]
+```
+
+**Other Comprehensions:**
+- **Set comprehension:** `{x for x in iterable}`
+- **Dictionary comprehension:** `{k: v for k, v in iterable}`
+- **Generator expression:** `(expression for item in iterable)`
+
+List comprehensions are often more readable and efficient than using loops to build lists.
