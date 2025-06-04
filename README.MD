@@ -802,3 +802,100 @@ except MyCustomError as e:
 - It's common to end custom exception class names with `Error`.
 
 --- 
+## Object Oriented Programming (OOP) in Python
+
+Object Oriented Programming is a programming paradigm based on the concept of "objects", which can contain data (attributes) and code (methods). Python supports OOP and allows you to define your own classes and create objects.
+
+### Key Concepts
+
+- **Class:** A blueprint for creating objects.
+- **Object:** An instance of a class.
+- **Attribute:** A variable that belongs to an object or class.
+- **Method:** A function that belongs to an object or class.
+- **Inheritance:** Mechanism to create a new class from an existing class.
+- **Encapsulation:** Hiding internal details and showing only necessary features.
+- **Polymorphism:** Ability to use a common interface for different data types.
+
+### Defining a Class
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name  # Attribute
+        self.age = age
+
+    def greet(self):  # Method
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+```
+
+### Creating Objects
+
+```python
+p1 = Person("Alice", 30)
+p1.greet()  # Output: Hello, my name is Alice and I am 30 years old.
+```
+
+### Inheritance
+
+```python
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+
+    def display_id(self):
+        print(f"Student ID: {self.student_id}")
+
+s1 = Student("Bob", 20, "S123")
+s1.greet()        # Inherited method
+s1.display_id()   # Output: Student ID: S123
+```
+
+### Encapsulation
+
+- Prefix an attribute with `_` (single underscore) to indicate it is intended as "protected".
+- Prefix with `__` (double underscore) to make it "private" (name mangling).
+
+```python
+class Example:
+    def __init__(self):
+        self.public = "public"
+        self._protected = "protected"
+        self.__private = "private"
+```
+
+### Polymorphism
+
+Different classes can define methods with the same name, and you can use them interchangeably.
+
+```python
+class Dog:
+    def speak(self):
+        print("Woof!")
+
+class Cat:
+    def speak(self):
+        print("Meow!")
+
+def animal_sound(animal):
+    animal.speak()
+
+animal_sound(Dog())  # Output: Woof!
+animal_sound(Cat())  # Output: Meow!
+```
+
+---
+
+**Summary Table:**
+
+| Concept        | Description                                      | Example Syntax                |
+|----------------|--------------------------------------------------|-------------------------------|
+| Class          | Blueprint for objects                            | `class MyClass:`              |
+| Object         | Instance of a class                              | `obj = MyClass()`             |
+| Attribute      | Variable in class/object                         | `self.attr = value`           |
+| Method         | Function in class                                | `def method(self):`           |
+| Inheritance    | Derive class from another                        | `class Sub(Base):`            |
+| Encapsulation  | Hide internal details                            | `_protected`, `__private`     |
+| Polymorphism   | Same interface, different implementations        | `animal.speak()`              |
+
+---
