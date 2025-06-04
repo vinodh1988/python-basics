@@ -466,4 +466,80 @@ print(evens)  # Output: [0, 2, 4, 6, 8]
 - **Dictionary comprehension:** `{k: v for k, v in iterable}`
 - **Generator expression:** `(expression for item in iterable)`
 
-List comprehensions are often more readable and efficient than using loops to build lists.
+List comprehensions are often more readable and efficient than using loops to build l
+
+## Functions in Python
+
+Functions are reusable blocks of code that perform a specific task. They help organize code, avoid repetition, and improve readability.
+
+### Defining a Function
+
+Use the `def` keyword to define a function:
+
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+```
+
+### Calling a Function
+
+Invoke the function by its name and pass required arguments:
+
+```python
+greet("Alice")  # Output: Hello, Alice!
+```
+
+### Function Arguments
+
+- **Positional arguments:** Passed in order.
+- **Keyword arguments:** Passed by name.
+- **Default arguments:** Provide a default value.
+- **Variable-length arguments:** Use `*args` for positional and `**kwargs` for keyword arguments.
+
+```python
+def add(a, b=0):
+    return a + b
+
+print(add(5))        # Output: 5
+print(add(5, 3))     # Output: 8
+
+def print_args(*args):
+    print(args)
+
+print_args(1, 2, 3)  # Output: (1, 2, 3)
+```
+
+### Return Statement
+
+Use `return` to send a value back from the function:
+
+```python
+def square(x):
+    return x * x
+
+result = square(4)  # result is 16
+```
+
+### Lambda Functions
+
+Anonymous, single-expression functions:
+
+```python
+double = lambda x: x * 2
+print(double(5))  # Output: 10
+```
+
+---
+
+**Summary Table:**
+
+| Feature            | Syntax Example                          |
+|--------------------|-----------------------------------------|
+| Define function    | `def func():`                           |
+| Call function      | `func()`                                |
+| Return value       | `return value`                          |
+| Default argument   | `def func(a=1):`                        |
+| Variable arguments | `def func(*args, **kwargs):`            |
+| Lambda function    | `lambda x: x + 1`                       |
+
+---
