@@ -623,3 +623,33 @@ process_data("world", lambda x: print("Lambda:", x))
 
 **Note:**  
 Any function that can be called (including lambdas and built-in functions) can be used as a callback in Python.
+
+## The `map()` Function in Python
+
+The `map()` function applies a given function to each item of an iterable (like a list or tuple) and returns a map object (which can be converted to a list, set, etc.).
+
+**Syntax:**
+```python
+map(function, iterable, ...)
+```
+
+- `function`: The function to apply to each item.
+- `iterable`: One or more iterables whose items are passed to the function.
+
+**Example:**
+```python
+numbers = [1, 2, 3, 4]
+squared = map(lambda x: x ** 2, numbers)
+print(list(squared))  # Output: [1, 4, 9, 16]
+```
+
+**With Multiple Iterables:**
+```python
+a = [1, 2, 3]
+b = [4, 5, 6]
+result = map(lambda x, y: x + y, a, b)
+print(list(result))  # Output: [5, 7, 9]
+```
+
+**Note:**  
+`map()` returns an iterator in Python 3. Use `list()` or `set()` to get the results.
