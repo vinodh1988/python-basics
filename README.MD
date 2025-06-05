@@ -1139,3 +1139,74 @@ with mysql.connector.connect(
 | Close          | `cursor.close()`, `conn.close()`                    |
 
 ---
+
+## Connecting Python to AWS
+
+Python can interact with AWS (Amazon Web Services) using the `boto3` library, which is the official AWS SDK for Python. With `boto3`, you can manage AWS services such as S3, EC2, DynamoDB, Lambda, and more.
+
+### Installing `boto3`
+
+Install the library using pip:
+
+```bash
+pip install boto3
+```
+
+### Configuring AWS Credentials
+
+You need AWS access keys to authenticate. Configure them using the AWS CLI or by setting environment variables:
+
+```bash
+aws configure
+```
+
+Or set environment variables:
+
+```bash
+export AWS_ACCESS_KEY_ID=your_access_key
+export AWS_SECRET_ACCESS_KEY=your_secret_key
+export AWS_DEFAULT_REGION=your_region
+```
+
+### Example: Connecting to S3 and Listing Buckets
+
+```python
+import boto3
+
+# Create an S3 client
+s3 = boto3.client('s3')
+
+# List all buckets
+response = s3.list_buckets()
+for bucket in response['Buckets']:
+    print(bucket['Name'])
+```
+
+### Example: Uploading a File to S3
+
+```python
+import boto3
+
+s3 = boto3.client('s3')
+s3.upload_file('local_file.txt', 'your-bucket-name', 'remote_file.txt')
+```
+
+### Example: Connecting to EC2 and Listing Instances
+
+```python
+import boto3
+
+ec2 = boto3.client('ec2')
+response = ec2.describe_instances()
+for reservation in response['Reservations']:
+    for instance in reservation['Instances']:
+        print(instance['InstanceId'], instance['State']['Name'])
+```
+
+---
+
+**Note:**  
+- Always use IAM roles or environment variables for credentials, not hardcoded values.
+- Refer to the [boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for more AWS service examples.
+
+--- 
