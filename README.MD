@@ -964,3 +964,80 @@ from mypackage import module1
 - Modules help organize and reuse code.
 - Use `import` to access code from other modules.
 - Group related modules in packages for better structure.
+
+## File Handling in Python
+
+File handling allows you to read from and write to files on disk. Python provides built-in functions and the `open()` function for file operations.
+
+### Opening a File
+
+Use `open(filename, mode)` to open a file:
+- `'r'`: Read (default)
+- `'w'`: Write (creates/truncates)
+- `'a'`: Append
+- `'b'`: Binary mode (e.g., `'rb'`, `'wb'`)
+- `'x'`: Create (fails if file exists)
+
+```python
+f = open("example.txt", "r")
+```
+
+### Reading from a File
+
+```python
+with open("example.txt", "r") as f:
+    content = f.read()         # Read entire file
+    # content = f.readline()   # Read one line
+    # content = f.readlines()  # Read all lines into a list
+```
+
+### Writing to a File
+
+```python
+with open("output.txt", "w") as f:
+    f.write("Hello, World!\n")
+    f.writelines(["Line 1\n", "Line 2\n"])
+```
+
+### Appending to a File
+
+```python
+with open("output.txt", "a") as f:
+    f.write("Another line\n")
+```
+
+### Closing a File
+
+Files are automatically closed when using `with`. Otherwise, use `f.close()`.
+
+### Example: Copying File Contents
+
+```python
+with open("input.txt", "r") as src, open("output.txt", "w") as dst:
+    for line in src:
+        dst.write(line)
+```
+
+### Checking File Existence
+
+```python
+import os
+if os.path.exists("example.txt"):
+    print("File exists")
+```
+
+---
+
+**Summary Table:**
+
+| Mode | Description           |
+|------|-----------------------|
+| `'r'`  | Read (default)      |
+| `'w'`  | Write (overwrite)   |
+| `'a'`  | Append              |
+| `'b'`  | Binary mode         |
+| `'x'`  | Create, fail if exists |
+
+---
+
+**Note:** Always use `with` for file operations to ensure files are properly closed.
