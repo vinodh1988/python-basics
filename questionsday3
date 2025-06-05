@@ -1,0 +1,36 @@
+# Case Study 1: File and Folder Handling
+
+## Programming Question:
+Write a Python program that scans a given directory for all `.txt` files, reads their contents, and creates a summary report file. The report should list each file name and the number of words in that file. The program should also create a backup of each `.txt` file in a separate backup folder.
+
+### Requirements:
+- Input: Path to the directory containing `.txt` files.
+- Output: A summary report file (`summary.txt`) with file names and word counts.
+- Create a `backup` folder (if not exists) and copy all `.txt` files into it.
+- Handle exceptions for missing directories or files.
+
+---
+
+# Case Study 2: S3 Bucket Handling
+
+## Programming Question:
+Write a Python script using `boto3` that uploads all images (`.jpg`, `.png`) from a local folder to a specified AWS S3 bucket. After uploading, the script should generate a CSV file listing the image file names and their corresponding S3 URLs.
+
+### Requirements:
+- Input: Local folder path and S3 bucket name.
+- Output: CSV file (`uploaded_images.csv`) with columns: `filename`, `s3_url`.
+- Use environment variables or a config file for AWS credentials.
+- Handle errors for missing files, upload failures, or permission issues.
+
+---
+
+# Case Study 3: MySQL with Python
+
+## Programming Question:
+Write a Python program that connects to a MySQL database, retrieves all records from a `students` table, and writes the data to a CSV file. The program should also allow the user to add a new student record via command-line input.
+
+### Requirements:
+- Connect to MySQL using `mysql-connector-python`.
+- Retrieve all records from the `students` table and export to `students.csv`.
+- Prompt the user to enter a new student's details (name, age, grade) and insert into the table.
+- Handle database connection errors and input validation.
