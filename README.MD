@@ -1041,3 +1041,101 @@ if os.path.exists("example.txt"):
 ---
 
 **Note:** Always use `with` for file operations to ensure files are properly closed.
+## Working with Databases in Python
+
+Python provides several libraries for interacting with databases. For MySQL, the most commonly used library is `mysql-connector-python` or `PyMySQL`.
+
+### Installing MySQL Connector
+
+Install the connector using pip:
+
+```bash
+pip install mysql-connector-python
+```
+
+### Connecting to a MySQL Database
+
+```python
+import mysql.connector
+
+# Establish a connection
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+
+# Create a cursor object
+cursor = conn.cursor()
+
+# Execute a query
+cursor.execute("SELECT * FROM your_table")
+
+# Fetch results
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+
+# Close the cursor and connection
+cursor.close()
+conn.close()
+```
+
+### Basic Operations
+
+- **Insert Data:**
+    ```python
+    cursor.execute("INSERT INTO your_table (col1, col2) VALUES (%s, %s)", (val1, val2))
+    conn.commit()
+    ```
+- **Update Data:**
+    ```python
+    cursor.execute("UPDATE your_table SET col1 = %s WHERE id = %s", (new_val, id_val))
+    conn.commit()
+    ```
+- **Delete Data:**
+    ```python
+    cursor.execute("DELETE FROM your_table WHERE id = %s", (id_val,))
+    conn.commit()
+    ```
+
+### Using Context Manager
+
+You can use `with` statements for automatic resource management:
+
+```python
+import mysql.connector
+
+with mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+) as conn:
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT * FROM your_table")
+        for row in cursor.fetchall():
+            print(row)
+```
+
+---
+
+**Note:**  
+- Always handle exceptions using `try-except` blocks for production code.
+- Never hardcode credentials in source files; use environment variables or configuration files.
+
+---
+
+**Summary Table:**
+
+| Operation      | Example Syntax                                      |
+|----------------|-----------------------------------------------------|
+| Connect        | `mysql.connector.connect(...)`                      |
+| Create Cursor  | `conn.cursor()`                                     |
+| Execute Query  | `cursor.execute("SQL", params)`                     |
+| Fetch Results  | `cursor.fetchall()` / `cursor.fetchone()`           |
+| Commit Changes | `conn.commit()`                                     |
+| Close          | `cursor.close()`, `conn.close()`                    |
+
+---
