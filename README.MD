@@ -899,3 +899,68 @@ animal_sound(Cat())  # Output: Meow!
 | Polymorphism   | Same interface, different implementations        | `animal.speak()`              |
 
 ---
+## Creating Modules in Python
+
+A module in Python is simply a file containing Python code (functions, classes, variables) that can be imported and reused in other programs.
+
+### Creating a Module
+
+1. **Write your code in a `.py` file.**  
+    Example: `mymodule.py`
+    ```python
+    # mymodule.py
+    def greet(name):
+         print(f"Hello, {name}!")
+    ```
+
+2. **Import the module in another Python file.**
+    ```python
+    import mymodule
+
+    mymodule.greet("Alice")  # Output: Hello, Alice!
+    ```
+
+### Importing Specific Items
+
+You can import specific functions, classes, or variables:
+```python
+from mymodule import greet
+
+greet("Bob")
+```
+
+### Module Search Path
+
+Python searches for modules in:
+- The current directory
+- Directories listed in `sys.path`
+- Standard library locations
+
+### The `__name__ == "__main__"` Idiom
+
+To allow code to run when the module is executed directly, but not when imported:
+```python
+# mymodule.py
+def greet(name):
+     print(f"Hello, {name}!")
+
+if __name__ == "__main__":
+     greet("World")
+```
+
+### Packages
+
+A package is a directory containing an `__init__.py` file and one or more module files. Import modules from packages using dot notation:
+```
+mypackage/
+     __init__.py
+     module1.py
+```
+```python
+from mypackage import module1
+```
+
+**Summary:**  
+- Modules help organize and reuse code.
+- Use `import` to access code from other modules.
+- Group related modules in packages for better structure.

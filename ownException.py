@@ -5,3 +5,6 @@ class InvalidIdError(Exception):
         self.message = message
         super().__init__(self.message)  
 
+    def __repr__(self):
+        return super().__repr__()
+
