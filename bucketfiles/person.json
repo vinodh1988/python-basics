@@ -1,0 +1,17 @@
+[
+    {
+        "sno": 1,
+        "name": "Alice",
+        "city": "New York"
+    },
+    {
+        "sno": 2,
+        "name": "Bob",
+        "city": "Los Angeles"
+    },
+    {
+        "sno": 3,
+        "name": "Charlie",
+        "city": "Chicago"
+    }
+]
