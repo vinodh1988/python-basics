@@ -1,0 +1,16 @@
+-- Case Study: Managing Database Access for a New Intern
+
+-- Scenario:
+-- The IT department at "ABC School" has hired a new intern who needs limited access to the school's database.
+-- As the database administrator at "ABC School", you are responsible for managing access to the school's database. 
+-- A new intern has joined the IT department and requires limited access to the 'school' database.
+
+-- Your tasks are as follows:
+-- 1. Create a new user account for the intern named 'intern' with a secure password.
+-- 2. Grant the intern permission to view and add records in all tables of the 'school' database.
+-- 3. Verify the permissions assigned to the intern.
+-- 4. Later, the intern's role changes and they should only be able to view records, not add them. Update their permissions accordingly.
+-- 5. Confirm that the intern's permissions have been updated.
+-- 6. At the end of the internship, remove the intern's access to the database completely.
+
+-- Complete each step using appropriate MySQL Data Control Language (DCL) commands.
