@@ -1,0 +1,50 @@
+-- 1. List all regions.
+-- 2. Find all countries in a specific region.
+-- 3. Show all locations in a given country.
+-- 4. List all jobs with their minimum and maximum salaries.
+-- 5. Find all departments in a specific location.
+-- 6. List all employees in a given department.
+-- 7. Show all employees who report to a specific manager.
+-- 8. Find all dependents of a specific employee.
+-- 9. List all employees hired after a certain date.
+-- 10. Find employees with a salary above a certain amount.
+-- 11. Show the department name and location for each department.
+-- 12. List all employees along with their job titles.
+-- 13. Find the employee(s) with the highest salary.
+-- 14. Count the number of employees in each department.
+-- 15. List all employees who do not have a manager.
+-- 16. Show all jobs with a maximum salary above 10000.
+-- 17. Find all departments without any employees.
+-- 18. List all employees and their dependents.
+-- 19. Show the number of dependents for each employee.
+-- 20. Find all employees who work in a specific city.
+-- 21. List all employees along with their department and location.
+-- 22. Find all employees who have no dependents.
+-- 23. Show all employees whose last name starts with 'S'.
+-- 24. List all employees who have the same job as a specific employee.
+-- 25. Find all employees who are managers.
+-- 26. Show the average salary for each department.
+-- 27. List all employees who work in a specific region.
+-- 28. Find all jobs that have not been assigned to any employee.
+-- 29. Show all employees who have been hired in the last 6 months.
+-- 30. List all employees with their manager's name.
+-- 31. Find all employees who work in departments located in a specific country.
+-- 32. Show the total salary paid by each department.
+-- 33. List all employees who have more than two dependents.
+-- 34. Find all employees whose salary is between 5000 and 10000.
+-- 35. Show all employees and their job titles, ordered by salary descending.
+-- 36. List all employees who work in the same department as a specific employee.
+-- 37. Find all employees who have the same last name.
+-- 38. Show the department with the highest average salary.
+-- 39. List all employees who have been hired before a specific date.
+-- 40. Find all employees who do not belong to any department.
+-- 41. Show all employees who work in locations without a state_province.
+-- 42. List all employees whose email contains 'admin'.
+-- 43. Find all employees who have a phone number starting with '+1'.
+-- 44. Show all employees and their country names.
+-- 45. List all employees who work in departments located in a specific city.
+-- 46. Find all employees who are not managers.
+-- 47. Show the number of employees hired each year.
+-- 48. List all employees who have the same manager.
+-- 49. Find all employees who work in the same location as a specific employee.
+-- 50. Show all employees and their dependents, including employees with no dependents.
