@@ -1,0 +1,53 @@
+"""
+Exercise: Database Design, DDL, and Metadata Exploration
+
+Description:
+This exercise will help you understand database data modeling, DDL (Data Definition Language) commands, and metadata inspection. You will design a relational database with at least 6 related tables, define all necessary constraints, perform schema alterations, and query metadata.
+
+Prerequisite Knowledge:
+- Understanding of primary keys, foreign keys, unique, not null, and check constraints.
+- Familiarity with CREATE TABLE, ALTER TABLE, and DROP commands.
+- Ability to use INFORMATION_SCHEMA or system tables to inspect metadata.
+
+Question:
+
+A university wants to build a database to manage its courses, students, instructors, departments, enrollments, and classrooms. Design and implement the following:
+
+1. **Create the following tables with appropriate columns and constraints:**
+    - `Department`: Each department has a unique ID, name, and building.
+    - `Instructor`: Each instructor has a unique ID, name, email (unique), and belongs to a department.
+    - `Student`: Each student has a unique ID, name, email (unique), and enrollment year.
+    - `Course`: Each course has a unique code, title, credits (must be between 1 and 5), and is offered by a department.
+    - `Classroom`: Each classroom has a unique room number, building, and capacity (must be positive).
+    - `Enrollment`: Each enrollment links a student to a course, with a semester, year, and grade (nullable).
+
+    **Constraints to include:**
+    - Primary keys for all tables.
+    - Foreign keys for relationships:
+        - `Instructor(department_id)` references `Department(department_id)`.
+        - `Course(department_id)` references `Department(department_id)`.
+        - `Enrollment(student_id)` references `Student(student_id)`.
+        - `Enrollment(course_code)` references `Course(course_code)`.
+    - Unique constraints (e.g., emails).
+    - Not null constraints where appropriate.
+    - Check constraints (e.g., credits range, positive capacity).
+
+2. **Alter the schema as follows:**
+    - Add a new column `phone_number` to the `Instructor` table (must be unique and not null).
+    - Change the `capacity` column in `Classroom` to allow only values greater than or equal to 10.
+    - Drop the `grade` column from the `Enrollment` table.
+    - Drop the unique constraint on `Student(email)`.
+    - Alter the foreign key on `Enrollment(course_code)` to reference `Course(course_code)` with `ON DELETE CASCADE`.
+
+3. **Metadata Exploration:**
+    - Write queries to list all tables in the database.
+    - Write queries to list all columns and their data types for the `Course` table.
+    - Write queries to list all constraints (primary key, foreign key, unique, check) on the `Enrollment` table.
+
+**Notes:**
+- Use standard SQL syntax.
+- Use INFORMATION_SCHEMA or your DBMS's system tables for metadata queries.
+- Think carefully about relationships and constraints to ensure data integrity.
+
+This exercise will help you practice DDL, data modeling, schema evolution, and metadata inspection.
+"""
